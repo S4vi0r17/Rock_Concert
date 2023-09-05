@@ -13,6 +13,7 @@
   "author": "Eder Benites",
   "license": "ISC",
   "devDependencies": {
+    "gulp": "^4.0.2",
     "sass": "^1.66.1"
   }
 }
