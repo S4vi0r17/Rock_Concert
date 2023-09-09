@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="img/95b3e17356f0fbf21ba964bd82f9b5b9.png"
-    />
+    <link rel="icon" type="image/png" href="build/img/fav.png" />
     <title>Rock Legends Live</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,7 +44,18 @@
 
     <section class="contenedor sobre-festival">
       <div class="imagen">
-        <img src="img/imagen_volcalista.jpg" alt="imagen volcalista rock" />
+        <picture>
+          <source srcset="build/img/imagen_volcalista.avif" type="image/avif" />
+          <source srcset="build/img/imagen_volcalista.webp" type="image/webp" />
+          <!-- Esto es recomendado por google  -->
+          <img
+            loading="lazy"
+            width="200"
+            height="300"
+            src="build/img/imagen_volcalista.jpg"
+            alt="imagen_volcalista"
+          />
+        </picture>
       </div>
       <div class="contenido-festival">
         <h2>Rock Legends Live</h2>
