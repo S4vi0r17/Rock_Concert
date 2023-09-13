@@ -454,7 +454,7 @@ img {
 .contenido-video h2 {
   color: #ffffff;
   font-size: 7rem;
-  margin: 0.5rem;
+  margin: 0.5rem 0;
 }
 .contenido-video p {
   background-color: #7a59c8;
@@ -494,6 +494,84 @@ img {
 .contenido-festival .fecha {
   color: #7a59c8;
   font-weight: 700;
+}
+
+.lineup {
+  background-color: #7a59c8;
+  padding: 5rem 0;
+}
+.lineup h3,
+.lineup p {
+  text-align: center;
+  color: #ffffff;
+}
+.lineup .dia {
+  text-transform: uppercase;
+  margin: 5rem 0;
+}
+
+.contenedor-escenario {
+  /*
+  p {
+    color: v.$negro;
+  }
+  */
+}
+@media (min-width: 768px) {
+  .contenedor-escenario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.escenario {
+  padding-top: 2rem;
+}
+.escenario .nombre-escenario::after {
+  content: "";
+  display: block;
+  width: 15rem;
+  height: 15rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 2rem auto 0 auto;
+}
+
+.rock .nombre-escenario:after {
+  background-image: url("../img/iconorock.png");
+}
+
+.rock1 .nombre-escenario:after {
+  background-image: url("../img/iconorock2.png");
+}
+
+.calendario {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.calendario li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+.calendario li span {
+  font-weight: 400;
+}
+
+.bg-amarillo {
+  background-color: #cb8d7a;
+}
+.bg-amarillo li:nth-child(odd) {
+  background-color: #c47d68;
+}
+
+.bg-verde {
+  background-color: #79bbfc;
+}
+.bg-verde li:nth-child(odd) {
+  background-color: #60aefb;
 }
 
 /*
