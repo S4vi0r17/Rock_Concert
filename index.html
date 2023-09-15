@@ -20,9 +20,9 @@
       <div class="contenedor contenido-header">
         <h1>Rock Legends Live</h1>
         <nav class="navegacion-principal">
-          <a href="#">Lineup</a>
-          <a href="#">Gallery</a>
-          <a href="#">Tickets</a>
+          <a href="#lineup">Lineup</a>
+          <a href="#galeria">Gallery</a>
+          <a href="#boletos">Tickets</a>
         </nav>
       </div>
     </header>
@@ -60,12 +60,14 @@
       <div class="contenido-festival">
         <h2>Rock Legends Live</h2>
         <p class="fecha">October 2023 | Lima, Peru</p>
+
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam minima
           repudiandae exercitationem debitis, consequuntur et impedit eveniet
           praesentium inventore laborum saepe delectus eaque enim hic quo atque?
           Deserunt, debitis nam?
         </p>
+        <div id="lineup"></div>
       </div>
     </section>
 
@@ -131,11 +133,51 @@
       </div>
     </section>
 
-    <section class="galeria contenedor">
+    <section id="galeria" class="galeria contenedor">
       <h3>Gallery</h3>
       <ul class="galeria-imagenes"></ul>
     </section>
 
+    <section id="boletos" class="boletos bg-verde">
+      <h3>Tickets</h3>
+      <div class="contenedor contenedor-boletos">
+        <div class="basico pase">
+          <p class="nombre-pase">Single-Day Pass (Basic)</p>
+          <header class="pase-header">
+            <p>Description</p>
+          </header>
+          <div class="pase-body">
+            <ul>
+              <li>Access to both stages</li>
+              <li>Complimentary food and drinks</li>
+            </ul>
+          </div>
+          <footer class="pase-footer">
+            <p>$99 USD</p>
+          </footer>
+        </div>
+        <div class="premium pase">
+          <p class="nombre-pase">Two-Day VIP Pass (Premium)</p>
+          <header class="pase-header">
+            <p>Description</p>
+          </header>
+          <div class="pase-body">
+            <ul>
+              <li>Access to both stages</li>
+              <li>Gourmet dining</li>
+              <li>Free event merch</li>
+              <li>VIP privileges</li>
+            </ul>
+          </div>
+          <footer class="pase-footer">
+            <p>$179 USD</p>
+          </footer>
+        </div>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <p>&copy; 2023 Rock Legends Live | Todos los derechos reservados</p>
+    </footer>
     <script src="build/js/app.js"></script>
   </body>
 </html>

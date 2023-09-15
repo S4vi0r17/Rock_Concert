@@ -2,7 +2,7 @@
 @use "../base/variables" as v;
 
 .lineup {
-  background-color: v.$rosa;
+  background-color: v.$moradoClaro;
   padding: 5rem 0;
 
   h3,
@@ -66,8 +66,8 @@
 }
 
 .bg-verde {
-  background-color: v.$verde;
+  background-color: v.$celeste;
   li:nth-child(odd) {
-    background-color: darken(v.$verde, 5%);
+    background-color: darken(v.$celeste, 5%);
   }
 }

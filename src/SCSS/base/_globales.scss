@@ -19,6 +19,10 @@ body {
   &.fijar-body {
     overflow: hidden;
   }
+  // Solucionar el el cambio de espacio del nav
+  &.body-scroll {
+    padding-top: 8.6rem;
+  }
 }
 
 p {
