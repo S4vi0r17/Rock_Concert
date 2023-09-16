@@ -2,6 +2,9 @@ const { src, dest, watch, parallel } = require("gulp");
 //css
 const sass = require("gulp-sass")(require("sass"));
 const plumber = require("gulp-plumber");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+const postcss = require("gulp-postcss");
 //imagenes
 const cache = require("gulp-cache");
 const imagemin = require("gulp-imagemin");
@@ -23,6 +26,7 @@ function css(done) {
   src("src/scss/**/*.scss")
     .pipe(plumber())
     .pipe(sass())
+    .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest("build/css"));
 
   done();
@@ -74,4 +78,4 @@ exports.js = javascript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(imagenes, versionWebp, versionAvif, javascript, dev);
+exports.dev = parallel(css,imagenes, versionWebp, versionAvif, javascript, dev);
