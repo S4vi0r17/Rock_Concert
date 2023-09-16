@@ -5,6 +5,9 @@ const plumber = require("gulp-plumber");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const postcss = require("gulp-postcss");
+// Mapas
+const sourcemap = require('gulp-sourcemaps');
+
 //imagenes
 const cache = require("gulp-cache");
 const imagemin = require("gulp-imagemin");
@@ -23,11 +26,13 @@ function css(done) {
   //src('src/scss/**/*.scss').pipe(sass()).pipe(dest("build/css"));
 
   // Agregamos plumber
-  src("src/scss/**/*.scss")
+  src("src/scss/**/*.scss") // Se identificar los scss
+    .pipe(sourcemap.init())
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(sass()) // compilarlo
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(dest("build/css"));
+    .pipe(sourcemap.write('.'))
+    .pipe(dest("build/css")); // Almacen
 
   done();
 }
